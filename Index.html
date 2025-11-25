@@ -1,0 +1,511 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TGS</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        <div class="main-panel">
+            <div class="control-panel sub-panel">
+                <h2 class="day">Dia 0</h2>
+                <button class="panel-button newDay-button">Nuevo día</button>
+                <h2 class="height-container">Altura: <h2 class="height">0cm</h2></h2>
+                <div class="manual-changes">
+                    <h2 class="manualChanger-subtitle subtitle">Cambios manuales</h2>
+                    <div class="manual-change temp-changer">
+                        <input type="checkbox" class="check temp-check"><h3 class="mini-title">Temperatura</h3>
+                        <div class="changer-container">
+                            <button class="changer-button dism tempDism" disabled>-</button>
+                            <p class="change-value temp-value">0.0</p>
+                            <button class="changer-button aument tempAument" disabled>+</button>
+                        </div>
+                    </div>
+                    <div class="manual-change humidity-changer">
+                        <input type="checkbox" class="check humidity-check"><h3 class="mini-title">Humedad</h3>
+                        <div class="changer-container">
+                            <button class="changer-button dism humidityDism" disabled>-</button>
+                            <p class="change-value humidity-value">0.0</p>
+                            <button class="changer-button aument humidityAument" disabled>+</button>
+                        </div>
+                    </div>
+                    <div class="manual-change pH-changer">
+                        <input type="checkbox" class="check pH-check"><h3 class="mini-title">pH</h3>
+                        <div class="changer-container">
+                            <button class="changer-button pHDism" disabled>-</button>
+                            <p class="change-value pH-value">0.0</p>
+                            <button class="changer-button aument pHAument" disabled>+</button>
+                        </div>
+                    </div>
+                    <div class="manual-change sun-changer">
+                        <input type="checkbox" class="check sun-check"><h3 class="mini-title">Luz solar</h3>
+                        <div class="changer-container">
+                            <button class="changer-button sunDism" disabled>-</button>
+                            <p class="change-value sun-value">0.0</p>
+                            <button class="changer-button aument sunAument" disabled>+</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="visualPlant-panel sub-panel">
+                <img src="Images/Flower1.png" class="visualPlant">
+            </div>
+            <div class="description-panel sub-panel">
+                <div class="switch"><input type="checkbox" class="system-switch" checked><p>Activo</p></div>
+                <div class="problems-description sub-description">
+                    <h3 class="problems-subtitle reports-subtitle">Problemas generados</h3>
+                    <ul class="problems-list reports">
+                        <li class="problem">Problema 1</li>
+                        <li class="problem">Problema 2</li>
+                        <li class="problem">Problema 3</li>
+                    </ul>
+                </div>
+                <div class="solution-description sub-description">
+                    <h3 class="solutions-subtitle reports-subtitle">Cambios necesarios aplicados</h3>
+                    <ul class="solutions-list reports">
+                        <li class="solution">Cambio 1</li>
+                        <li class="solution">Cambio 2</li>
+                        <li class="solution">Cambio 3</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="mainStats-panel">
+            <div class="stats-container temp-stats">
+                <h3 class="stats-title">Temperatura</h3>
+                <div class="stats">
+                    <div class="column temp-column">
+                        <small class="column-value">10</small>
+                        <small class="column-value">20</small>
+                        <small class="column-value">30</small>
+                        <small class="column-value">40</small>
+                        <small class="column-value">50</small>
+                        <small class="column-value">60</small>
+                        <small class="column-value">70</small>
+                        <small class="column-value">80</small>
+                        <small class="column-value">90</small>
+                        <small class="column-value">100</small>
+                        <small class="column-text">°C</small>
+                    </div>
+                    <div class="stats-panel temp-stats-panel">
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                        <div class="temp-stats-value-column value-column"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="row days-row">
+                        <small class="row-value">1</small>
+                        <small class="row-value">2</small>
+                        <small class="row-value">3</small>
+                        <small class="row-value">4</small>
+                        <small class="row-value">5</small>
+                        <small class="row-value">6</small>
+                        <small class="row-value">7</small>
+                        <small class="row-value">8</small>
+                        <small class="row-value">9</small>
+                        <small class="row-value">10</small>
+                        <small class="row-value">11</small>
+                        <small class="row-value">12</small>
+                        <small class="row-value">13</small>
+                        <small class="row-value">14</small>
+                        <small class="row-value">15</small>
+                        <small class="row-value">16</small>
+                        <small class="row-value">17</small>
+                        <small class="row-value">18</small>
+                        <small class="row-value">19</small>
+                        <small class="row-value">20</small>
+                        <small class="row-value">21</small>
+                        <small class="row-value">22</small>
+                        <small class="row-value">23</small>
+                        <small class="row-value">24</small>
+                        <small class="row-value">25</small>
+                        <small class="row-value">26</small>
+                        <small class="row-value">27</small>
+                        <small class="row-value">28</small>
+                        <small class="row-value">29</small>
+                        <small class="row-value">30</small>
+                        <small class="row-value">31</small>
+                        <small class="row-text">Días</small>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-container humidity-stats">
+                <h3 class="stats-title">Humedad</h3>
+                <div class="stats">
+                    <div class="column humidity-column">
+                        <small class="column-value">10</small>
+                        <small class="column-value">20</small>
+                        <small class="column-value">30</small>
+                        <small class="column-value">40</small>
+                        <small class="column-value">50</small>
+                        <small class="column-value">60</small>
+                        <small class="column-value">70</small>
+                        <small class="column-value">80</small>
+                        <small class="column-value">90</small>
+                        <small class="column-value">100</small>
+                        <small class="column-text">Humedad(%)</small>
+                    </div>
+                    <div class="stats-panel humidity-stats-panel">
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                        <div class="humidity-stats-value-column value-column"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="row days-row">
+                        <small class="row-value">1</small>
+                        <small class="row-value">2</small>
+                        <small class="row-value">3</small>
+                        <small class="row-value">4</small>
+                        <small class="row-value">5</small>
+                        <small class="row-value">6</small>
+                        <small class="row-value">7</small>
+                        <small class="row-value">8</small>
+                        <small class="row-value">9</small>
+                        <small class="row-value">10</small>
+                        <small class="row-value">11</small>
+                        <small class="row-value">12</small>
+                        <small class="row-value">13</small>
+                        <small class="row-value">14</small>
+                        <small class="row-value">15</small>
+                        <small class="row-value">16</small>
+                        <small class="row-value">17</small>
+                        <small class="row-value">18</small>
+                        <small class="row-value">19</small>
+                        <small class="row-value">20</small>
+                        <small class="row-value">21</small>
+                        <small class="row-value">22</small>
+                        <small class="row-value">23</small>
+                        <small class="row-value">24</small>
+                        <small class="row-value">25</small>
+                        <small class="row-value">26</small>
+                        <small class="row-value">27</small>
+                        <small class="row-value">28</small>
+                        <small class="row-value">29</small>
+                        <small class="row-value">30</small>
+                        <small class="row-value">31</small>
+                        <small class="row-text">Días</small>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-container pH-stats">
+                <h3 class="stats-title">pH</h3>
+                <div class="stats">
+                    <div class="column humidity-column">
+                        <small class="column-value">1</small>
+                        <small class="column-value">2</small>
+                        <small class="column-value">3</small>
+                        <small class="column-value">4</small>
+                        <small class="column-value">5</small>
+                        <small class="column-value">6</small>
+                        <small class="column-value">7</small>
+                        <small class="column-value">8</small>
+                        <small class="column-value">9</small>
+                        <small class="column-value">10</small>
+                        <small class="column-value">11</small>
+                        <small class="column-value">12</small>
+                        <small class="column-value">13</small>
+                        <small class="column-value">14</small>
+                        <small class="column-text">pH</small>
+                    </div>
+                    <div class="stats-panel pH-stats-panel">
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                        <div class="pH-stats-value-column value-column"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="row days-row">
+                        <small class="row-value">1</small>
+                        <small class="row-value">2</small>
+                        <small class="row-value">3</small>
+                        <small class="row-value">4</small>
+                        <small class="row-value">5</small>
+                        <small class="row-value">6</small>
+                        <small class="row-value">7</small>
+                        <small class="row-value">8</small>
+                        <small class="row-value">9</small>
+                        <small class="row-value">10</small>
+                        <small class="row-value">11</small>
+                        <small class="row-value">12</small>
+                        <small class="row-value">13</small>
+                        <small class="row-value">14</small>
+                        <small class="row-value">15</small>
+                        <small class="row-value">16</small>
+                        <small class="row-value">17</small>
+                        <small class="row-value">18</small>
+                        <small class="row-value">19</small>
+                        <small class="row-value">20</small>
+                        <small class="row-value">21</small>
+                        <small class="row-value">22</small>
+                        <small class="row-value">23</small>
+                        <small class="row-value">24</small>
+                        <small class="row-value">25</small>
+                        <small class="row-value">26</small>
+                        <small class="row-value">27</small>
+                        <small class="row-value">28</small>
+                        <small class="row-value">29</small>
+                        <small class="row-value">30</small>
+                        <small class="row-value">31</small>
+                        <small class="row-text">Días</small>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-container sun-stats">
+                <h3 class="stats-title">Luz solar</h3>
+                <div class="stats">
+                    <div class="column humidity-column">
+                        <small class="column-value">10</small>
+                        <small class="column-value">20</small>
+                        <small class="column-value">30</small>
+                        <small class="column-value">40</small>
+                        <small class="column-value">50</small>
+                        <small class="column-value">60</small>
+                        <small class="column-value">70</small>
+                        <small class="column-value">80</small>
+                        <small class="column-value">90</small>
+                        <small class="column-value">100</small>
+                        <small class="column-text">Humedad(%)</small>
+                    </div>
+                    <div class="stats-panel humidity-stats-panel">
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                        <div class="sun-stats-value-column value-column"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="row days-row">
+                        <small class="row-value">1</small>
+                        <small class="row-value">2</small>
+                        <small class="row-value">3</small>
+                        <small class="row-value">4</small>
+                        <small class="row-value">5</small>
+                        <small class="row-value">6</small>
+                        <small class="row-value">7</small>
+                        <small class="row-value">8</small>
+                        <small class="row-value">9</small>
+                        <small class="row-value">10</small>
+                        <small class="row-value">11</small>
+                        <small class="row-value">12</small>
+                        <small class="row-value">13</small>
+                        <small class="row-value">14</small>
+                        <small class="row-value">15</small>
+                        <small class="row-value">16</small>
+                        <small class="row-value">17</small>
+                        <small class="row-value">18</small>
+                        <small class="row-value">19</small>
+                        <small class="row-value">20</small>
+                        <small class="row-value">21</small>
+                        <small class="row-value">22</small>
+                        <small class="row-value">23</small>
+                        <small class="row-value">24</small>
+                        <small class="row-value">25</small>
+                        <small class="row-value">26</small>
+                        <small class="row-value">27</small>
+                        <small class="row-value">28</small>
+                        <small class="row-value">29</small>
+                        <small class="row-value">30</small>
+                        <small class="row-value">31</small>
+                        <small class="row-text">Días</small>
+                    </div>
+                </div>
+            </div>
+            <div class="stats-container temp-stats">
+                <h3 class="stats-title">Altura</h3>
+                <div class="stats">
+                    <div class="column temp-column">
+                        <small class="column-value height-column">10</small>
+                        <small class="column-value height-column">20</small>
+                        <small class="column-value height-column">30</small>
+                        <small class="column-value height-column">40</small>
+                        <small class="column-value height-column">50</small>
+                        <small class="column-value height-column">60</small>
+                        <small class="column-value height-column">70</small>
+                        <small class="column-value height-column">80</small>
+                        <small class="column-value height-column">90</small>
+                        <small class="column-value height-column">100</small>
+                        <small class="column-text">cm</small>
+                    </div>
+                    <div class="stats-panel height-stats-panel">
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                        <div class="height-stats-value-column value-column"></div>
+                    </div>
+                    <div class="empty"></div>
+                    <div class="row days-row">
+                        <small class="row-value">1</small>
+                        <small class="row-value">2</small>
+                        <small class="row-value">3</small>
+                        <small class="row-value">4</small>
+                        <small class="row-value">5</small>
+                        <small class="row-value">6</small>
+                        <small class="row-value">7</small>
+                        <small class="row-value">8</small>
+                        <small class="row-value">9</small>
+                        <small class="row-value">10</small>
+                        <small class="row-value">11</small>
+                        <small class="row-value">12</small>
+                        <small class="row-value">13</small>
+                        <small class="row-value">14</small>
+                        <small class="row-value">15</small>
+                        <small class="row-value">16</small>
+                        <small class="row-value">17</small>
+                        <small class="row-value">18</small>
+                        <small class="row-value">19</small>
+                        <small class="row-value">20</small>
+                        <small class="row-value">21</small>
+                        <small class="row-value">22</small>
+                        <small class="row-value">23</small>
+                        <small class="row-value">24</small>
+                        <small class="row-value">25</small>
+                        <small class="row-value">26</small>
+                        <small class="row-value">27</small>
+                        <small class="row-value">28</small>
+                        <small class="row-value">29</small>
+                        <small class="row-value">30</small>
+                        <small class="row-value">31</small>
+                        <small class="row-text">Días</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>

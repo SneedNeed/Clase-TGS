@@ -1,0 +1,168 @@
+*{
+    font-family: sans-serif;
+}
+body{
+    padding: 0;
+    margin: 0;
+}
+.main-panel{
+    width: 90vw;
+    display: flex;
+    margin: 5vh auto;
+    gap: 2vw;
+    background: #c5c5c5;
+    padding: 5vh 2vw;
+    border-radius: 8px;
+}
+.main-panel div{
+    width: 100%;
+}
+.control-panel{
+    text-align: center;
+}
+.newDay-button{
+    margin: auto;
+    width: 10vw;
+    height: 10vh;
+    border-radius: 8px;
+    font-size: 3vh;
+    border:none;
+    cursor: pointer;
+    transition:background .2s
+}
+.newDay-button:hover{
+    background: #585858;
+}
+.changer-container{
+    display: flex;
+}
+/*.changer-container button,*/ .changer-container p{
+    width: 100%;
+    text-align: center;
+    font-size: 4vh;
+    color:#585858
+}
+.changer-container button{
+    width: 10vw;
+    font-size: 5vh;
+    height: auto;
+    border-radius: 8px;
+    outline: none;
+    border: none;
+}
+.mini-title{
+    display: inline;
+}
+.check{
+    width: 2.5vh;
+    height: 2.5vh;
+}
+.manual-change{
+    width: 15vw !important;
+    text-align: center;
+    margin: 3vh auto;
+}
+.visualPlant-panel{
+    background-color: #fff;
+    border-radius: 8px;
+    height: 80vh;
+    position: relative;
+}
+.visualPlant{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    image-rendering: pixelated;
+    align-self: self-end;
+    position: absolute;
+    bottom: 0;
+}
+.reports-subtitle{
+    margin-top: 5vh;
+}
+.reports{
+    background: #fff;
+    padding: 5vh 2vw;
+    height: auto;
+    border-radius: 8px;
+}
+.problems-list{
+    color:#ff0000
+}
+.solutions-list{
+    color:#2fb112;
+}
+li{
+    margin: 2vh 0;
+}
+
+.mainStats-panel{
+    padding: 0 2vw;
+    width: 100vw;
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+.stats{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 5vw 40vw;
+    grid-template-rows: 40vw 2vw;
+    position: relative;
+}
+.column{
+    display: flex;
+    text-align: center;
+    flex-direction: column-reverse;
+    border-bottom: #000 solid 2px;
+    border-right: #000 solid 2px;
+    height: 100%;
+    gap: 1.5vh;
+}
+.column-value{
+    flex:1;
+}
+.row{
+    display: flex;
+    gap: .3vw;
+    border-top: #000 solid 2px;
+}
+.empty{
+    border-right:#000 solid 2px;;
+}
+.row-value{
+    width: 2%;
+    text-align: center;
+}
+.stats-panel{
+    height: 95%;
+    display: flex;
+    gap: .3vw;
+    align-items: flex-end;
+    align-self: self-end;
+}
+.humidity-stats-value-column{
+    background-color: aqua;
+}
+.stats-title{
+    text-align: center;
+}
+.value-column{
+    width: 2%;
+    height: 0;
+    background: #7d8082;
+}
+.switch{
+    display: flex;
+    margin: auto;
+    font-size:5vh;
+    text-align: center;
+    justify-content: center;
+    align-content: center;
+}
+.switch input{
+    width: 2vw;
+}
+.switch p{
+    display: inline;
+}
