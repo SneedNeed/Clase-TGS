@@ -115,7 +115,7 @@ class stats{
             const act = 
             document.querySelectorAll(`.temp-stats-value-column`)[i];
     
-            const height = (this.tempStats[i] * 100) / maxTemp;
+            const height = getHeight(this.tempStats[i], maxTemp);
             act.style.height = `${height}%`;
         }
         //Humedad
@@ -123,7 +123,7 @@ class stats{
             const act = 
             document.querySelectorAll(`.humidity-stats-value-column`)[i];
     
-            const height = (this.humStats[i] * 100) / maxHumidity;
+            const height = getHeight(this.humStats[i], maxHumidity);
             act.style.height = `${height}%`;
         }
         //pH
@@ -131,7 +131,7 @@ class stats{
             const act = 
             document.querySelectorAll(`.pH-stats-value-column`)[i];
     
-            const height = (this.pHStats[i] * 100) / maxpH;
+            const height = getHeight(this.pHStats[i], maxpH);
             act.style.height = `${height}%`;
         }
         //Luz solar
@@ -139,14 +139,14 @@ class stats{
             const act = 
             document.querySelectorAll(`.sun-stats-value-column`)[i];
     
-            const height = (this.sunStats[i] * 100) / maxSun;
+            const height = getHeight(this.sunStats[i], maxSun);
             act.style.height = `${height}%`;
         }
         //Altura
         for(let i = 0; i < this.grown.length; i ++){
             const act = document.querySelectorAll(`.height-stats-value-column`)[i];
 
-            const height = (this.grown[i] * 100) / actPlant.maxHeight;
+            const height = getHeight(this.grown[i], actPlant.maxHeight);
             act.style.height = `${height}%`;
         }
         const div = actPlant.maxHeight / 10;
@@ -215,81 +215,7 @@ const getRowValues = ()=>{
     return result;
 }
 
-//============================Declaracion de variables===================================\\
-const maxTemp = 100;
-const maxpH = 14;
-const maxHumidity = 100;
-const maxSun = 100;
-
-const newDayButton = Get(".newDay-button");
-const daysCounter = Get(".day");
-const problemList = Get(".problems-list");
-const solveList = Get(".solutions-list");
-const mainSwitch = Get('.system-switch')
-const heightMessage = Get('.height')
-
-const tempChanger = 
-    new manualChanger(".temp-check", ".tempDism", ".temp-value", ".tempAument");
-const humChanger = 
-    new manualChanger(".humidity-check", ".humidityDism", ".humidity-value", ".humidityAument");
-const pHChanger = 
-    new manualChanger(".pH-check", ".pHDism", ".pH-value", ".pHAument");
-const sunChanger = 
-    new manualChanger(".sun-check", ".sunDism", ".sun-value", ".sunAument");
-const changers = [tempChanger, humChanger, pHChanger, sunChanger];
-
-const image = Get(".visualPlant");
-
-const rowValues = getRowValues();
-
-
-//=============================Proceso=================================================\\
-
-let actPlant, actStats;
-if(!exist('plantInfo')){
-    actPlant = registPlant();
-    savePlant(JSON.stringify(actPlant.dictObj));
-}else{
-    let dict = getPlant();
-    actPlant = new plant(dict.days, dict.actHeight, dict.nPh, dict.actPH, dict.nHum, dict.actHum,
-        dict.nSunL, dict.actSunL, dict.nTemp, dict.actTemp, dict.maxHeight
-    );
-}
-if(!exist('statsInfo')){
-    actStats = new stats([], [], [], [], [], [], []);
-    saveStats(JSON.stringify(actStats.dictObj));
-}else{
-    let dict = getStats();
-    actStats = 
-        new stats(dict.actProblems, dict.actSolves, dict.tempStats, dict.humStats, dict.pHStats, dict.sunStats, dict.grown);
-}
-actStats.showInfo();
-
-actPlant.showInfo()
-
-for(let i = 0; i < changers.length; i ++){
-    changers[i].checkBox.addEventListener('click', changer =>{
-        changers[i].dismButton.disabled = !changer.target.checked;
-        changers[i].aumButton.disabled = !changer.target.checked;
-        changers[i].textValue.style = changer.target.checked ? "color:#000" : "";
-        changers[i].textValue.contentEditable = changer.target.checked;
-    
-    });
-
-    changers[i].dismButton.addEventListener('click', ()=>{
-        changers[i].textValue.innerHTML = ((getNums(changers[i].textValue.innerHTML) - .5).toFixed(1));
-        if(i == 0) changers[i].textValue.innerHTML += '°C';
-        else if(i == 1) changers[i].textValue.innerHTML += '%'
-    });
-    changers[i].aumButton.addEventListener('click', ()=>{
-        changers[i].textValue.innerHTML = ((getNums(changers[i].textValue.innerHTML) + .5).toFixed(1));
-        if(i == 0) changers[i].textValue.innerHTML += '°C';
-        else if(i == 1) changers[i].textValue.innerHTML += '%'
-    });
-
-}
-
-newDayButton.addEventListener('click', ()=>{
+const newDay = ()=>{
     console.log(actPlant)
     const grewSpeed = actPlant.maxHeight / 30;
     actPlant.days ++;
@@ -543,4 +469,97 @@ newDayButton.addEventListener('click', ()=>{
 
     savePlant(JSON.stringify(actPlant.dictObj))
     saveStats(JSON.stringify(actStats.dictObj))
+};
+
+const getHeight = (act, max) =>{
+    return ((act * 100) / max) - 1;
+}
+
+//============================Declaracion de variables===================================\\
+const maxTemp = 100;
+const maxpH = 14;
+const maxHumidity = 100;
+const maxSun = 100;
+
+const newDayButton = Get(".newDay-button");
+const daysCounter = Get(".day");
+const problemList = Get(".problems-list");
+const solveList = Get(".solutions-list");
+const mainSwitch = Get('.system-switch')
+const heightMessage = Get('.height')
+const autoDayCheckBox = Get('.autoDay-check');
+
+const tempChanger = 
+    new manualChanger(".temp-check", ".tempDism", ".temp-value", ".tempAument");
+const humChanger = 
+    new manualChanger(".humidity-check", ".humidityDism", ".humidity-value", ".humidityAument");
+const pHChanger = 
+    new manualChanger(".pH-check", ".pHDism", ".pH-value", ".pHAument");
+const sunChanger = 
+    new manualChanger(".sun-check", ".sunDism", ".sun-value", ".sunAument");
+const changers = [tempChanger, humChanger, pHChanger, sunChanger];
+
+const image = Get(".visualPlant");
+
+const rowValues = getRowValues();
+
+
+//=============================Proceso=================================================\\
+
+let actPlant, actStats;
+if(!exist('plantInfo')){
+    actPlant = registPlant();
+    savePlant(JSON.stringify(actPlant.dictObj));
+}else{
+    let dict = getPlant();
+    actPlant = new plant(dict.days, dict.actHeight, dict.nPh, dict.actPH, dict.nHum, dict.actHum,
+        dict.nSunL, dict.actSunL, dict.nTemp, dict.actTemp, dict.maxHeight
+    );
+}
+if(!exist('statsInfo')){
+    actStats = new stats([], [], [], [], [], [], []);
+    saveStats(JSON.stringify(actStats.dictObj));
+}else{
+    let dict = getStats();
+    actStats = 
+        new stats(dict.actProblems, dict.actSolves, dict.tempStats, dict.humStats, dict.pHStats, dict.sunStats, dict.grown);
+}
+actStats.showInfo();
+
+actPlant.showInfo()
+
+for(let i = 0; i < changers.length; i ++){
+    changers[i].checkBox.addEventListener('click', changer =>{
+        changers[i].dismButton.disabled = !changer.target.checked;
+        changers[i].aumButton.disabled = !changer.target.checked;
+        changers[i].textValue.style = changer.target.checked ? "color:#000" : "";
+        changers[i].textValue.contentEditable = changer.target.checked;
+    
+    });
+
+    changers[i].dismButton.addEventListener('click', ()=>{
+        changers[i].textValue.innerHTML = ((getNums(changers[i].textValue.innerHTML) - .5).toFixed(1));
+        if(i == 0) changers[i].textValue.innerHTML += '°C';
+        else if(i == 1) changers[i].textValue.innerHTML += '%'
+    });
+    changers[i].aumButton.addEventListener('click', ()=>{
+        changers[i].textValue.innerHTML = ((getNums(changers[i].textValue.innerHTML) + .5).toFixed(1));
+        if(i == 0) changers[i].textValue.innerHTML += '°C';
+        else if(i == 1) changers[i].textValue.innerHTML += '%'
+    });
+
+}
+
+newDayButton.addEventListener('click', newDay);
+
+let interval;
+
+autoDayCheckBox.addEventListener('click', e=>{
+
+    newDayButton.disabled = e.target.checked;
+    if(e.target.checked){
+        interval = setInterval(newDay, 1000);
+    }else{
+        clearInterval(interval);
+    }
 });
